@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+ <definition name="baseLayout" template="/WEB-INF/views/superAdmin/baseLayout.jsp">
+   <put-attribute name="header" value="/WEB-INF/views/superAdmin/header.jsp"></put-attribute>
+   <put-attribute name="menu" value="/WEB-INF/views/superAdmin/menu.jsp"></put-attribute>
+   <put-attribute name="body" value="/WEB-INF/views/superAdmin/body.jsp"></put-attribute>
+   <put-attribute name="footer" value="/WEB-INF/views/superAdmin/footer.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name="superAdminBoard" extends="baseLayout">
+   <put-attribute name="body" value="/WEB-INF/views/superAdmin/rolesList.jsp"></put-attribute>
+ </definition>
+ 
+ 
+ 
+  <definition name="superAdminPermBoard" extends="baseLayout">
+   <put-attribute name="body" value="/WEB-INF/views/superAdmin/permissionsList.jsp"></put-attribute>
+ </definition>
+ 
+ 
+ <definition name="addRoleDefn" extends="superAdminBoard">
+   <put-attribute name="body" value="/WEB-INF/views/superAdmin/addRole.jsp"></put-attribute>
+ </definition>
+ 
+ 
+ 
+  <definition name="addPermDefn" extends="superAdminBoard">
+   <put-attribute name="body" value="/WEB-INF/views/superAdmin/addPermission.jsp"></put-attribute>
+ </definition>
+ 
+</tiles-definitions>       

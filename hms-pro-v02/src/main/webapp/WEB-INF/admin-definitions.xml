@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="adminBaseLayout"
+		template="/WEB-INF/views/admin/baseLayout.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/views/admin/header.jsp"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/views/admin/menu.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/body.jsp"></put-attribute>
+		<put-attribute name="footer"
+			value="/WEB-INF/views/admin/footer.jsp"></put-attribute>
+	</definition>
+
+	<definition name="adminBoard" extends="adminBaseLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/doctorsList.jsp"></put-attribute>
+	</definition>
+
+	<definition name="adminPatientBoard" extends="adminBoard">
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/patientsList.jsp"></put-attribute>
+	</definition>
+
+	<definition name="addDoctorDefnByAdmin" extends="adminBoard">
+		<put-attribute name="body"
+			value="/WEB-INF/views/doctor/addDoctor.jsp"></put-attribute>
+	</definition>
+
+	<definition name="addPatientDefnByAdmin"
+		extends="adminBoard">
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/addPatient.jsp"></put-attribute>
+	</definition>
+
+	<definition name="adminPatientEditBoard"
+		extends="adminBoard">
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/editPatient.jsp"></put-attribute>
+	</definition>
+
+	<definition name="adminDoctorEditBoard" extends="adminBoard">
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/editDoctor.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="adminNurseBoard" extends="adminBoard">
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/nursesList.jsp"></put-attribute>
+	</definition>
+
+	<definition name="addNurseDefnByAdmin"
+		extends="adminBoard">
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/addNurse.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="adminNurseEditBoard" extends="adminBoard">
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/editNurse.jsp"></put-attribute>
+	</definition>
+
+	<!-- 
+	<definition name="addadminDefn" extends="baseLayout"> <put-attribute 
+		name="body" value="/WEB-INF/views/addadmin.jsp"></put-attribute> </definition> -->
+
+</tiles-definitions>       

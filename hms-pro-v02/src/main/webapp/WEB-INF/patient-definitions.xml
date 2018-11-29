@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+ <definition name="patientBaseLayout" template="/WEB-INF/views/patient/baseLayout.jsp">
+   <put-attribute name="header" value="/WEB-INF/views/patient/header.jsp"></put-attribute>
+   <put-attribute name="menu" value="/WEB-INF/views/patient/menu.jsp"></put-attribute>
+   <put-attribute name="body" value="/WEB-INF/views/patient/body.jsp"></put-attribute>
+   <put-attribute name="footer" value="/WEB-INF/views/patient/footer.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name="patBoard" extends="patientBaseLayout">
+   <put-attribute name="body" value="/WEB-INF/views/patient/patientsList.jsp"></put-attribute>
+ </definition>
+ 
+ <definition name="addPatientDefn" extends="patientBaseLayout">
+ <put-attribute name="body" value="/WEB-INF/views/patient/addPatient.jsp"></put-attribute>
+ </definition>
+</tiles-definitions>       

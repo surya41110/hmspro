@@ -1,0 +1,31 @@
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hms-pro-v03
+    username: root
+    password: surya
+  jpa:
+    properties:
+          hibernate.dialect: org.hibernate.dialect.MySQL5Dialect 
+          format_sql: true
+    hibernate:
+      ddl-auto: update
+---
+spring:
+  profiles: qa
+  
+  datasource:
+    driver-class-name: org.h2.Driver 
+    url: jdbc:h2:mem:hmspro
+    username: sa
+    password: 
+  h2:
+    console:
+      enabled: true
+      path: /h2Console
+---
+spring:
+  profiles:
+    active: dev
+     
